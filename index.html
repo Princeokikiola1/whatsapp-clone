@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whatsapp web</title>
     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"/>
     <style>
-        body{
+       html, body{
             box-sizing: border-box;
             margin: 10px;
             padding: 0px;
+            overflow-x: hidden;
         }
         .back{
             top: auto;
@@ -146,16 +151,42 @@
               height: 200px;
               width: 400px;
             }
+            @media(max-width:768px) {
+              .pics{
+                display: none;
+              }
+            }
             .voice{
               position: absolute;
               left: 700px;
               top: 190px;
               width: 400px;
             }
+            @media(max-width:768px) {
+              .voice{
+                display: none;
+              }
+            }
             .group{
               width: 100%;
               margin-top: 80px;
               margin-bottom: 80px;
+            }
+            .three{
+                display: none;
+             }
+            @media(max-width:768px) {
+              .group{
+                display: none;
+              }
+              
+            }
+            @media(max-width:768px) {
+              .three{
+                display: block;
+                width: 100%;
+              }
+              
             }
             .with{
               text-align: center;
@@ -212,6 +243,47 @@
         color: white;
          font-size: 60px;
       }
+      @media(max-width:768px) {
+        .foot{
+         grid-template-columns: 50% 50%;
+         grid-column: 1;
+         justify-content: space-between;
+         align-content: space-between;
+         flex-direction: unset;
+
+      }
+      }
+      @media(max-width:768px) {
+        .bb{
+          width: 100%;
+          height: 1000px;
+        }
+      }
+      .logo{
+        border: 1px solid white;
+        border-radius: 100%;
+        background-color: black;
+        padding: 20px;
+      }
+      .txt{
+        position: absolute;
+        top: 500px;
+        left: 400px;
+        width: 100px;
+      }
+      .face{
+        position: absolute;
+        top: 450px;
+        left: 670px;
+        width: 100px;
+      }
+      @media(max-width:768px) {
+        .txt,.face{
+          display: none;
+        }
+      }
+      
+    
 
         
     </style>
@@ -263,38 +335,48 @@
         <div class="cont container-fluid">
       <div  class="back">
         <div class="con">
-            <img class="text" src="image/329792464_534173148815054_3736500652022655929_n.png" alt="">
+            <img class="text animate__animated animate__fadeInUpBig" src="image/329792464_534173148815054_3736500652022655929_n.png" alt="">
           </div>
 
           <div>
-          <img class="love" src="image/326429760_565901131866976_8960223839941330956_n.png" alt="">
+          <img class="love animate__animated animate__fadeInUpBig animate__delay-5s" src="image/326429760_565901131866976_8960223839941330956_n.png" alt="">
         </div>
 
         <div>
-          <img class="emoji" src="image/318567080_617695970110803_5923371384204745052_n.png" alt="">
+          <img class="emoji animate__animated animate__fadeInUpBig animate__delay-3s" src="image/318567080_617695970110803_5923371384204745052_n.png" alt="">
         </div>
  
         <div>
-          <h1 class="mes">Message <br> Privately</h1>
+          <h1 class="mes animate__animated animate__fadeInUpBig animate__delay-4s">Message <br> Privately</h1>
         </div>
-        <div class="simple">
+        <div class="simple animate__animated animate__fadeInUpBig animate__delay-5s">
         <p>Simple, reliable, private messaging and <br> calling for free*, available all over the <br> world.</p>
       </div>
       <div>
-        <button class="btn rounded-5 text-white"  style="background-color: rgb(37,211,102);">Download <img src="image/svgexport-13.svg" alt=""></button>
+        <button class="btn rounded-5 text-white animate__animated animate__fadeInUpBig"  style="background-color: rgb(37,211,102);">Download <img src="image/svgexport-13.svg" alt=""></button>
       </div>
-      <div  class="pics">
+      <div  class="pics animate__animated animate__fadeInUpBig">
         <img src="image/327713084_566495871797259_1779906837439389762_n.png" alt="" width="400px">
+       
       </div>
-      <div class="voice">
+      <div class="voice animate__animated animate__fadeInUpBig">
         <img  src="image/327063196_5800887573364035_3294745791563659576_n.png" alt="" width="350px">
+       
+      </div>
+      <div class="txt animate__animated animate__fadeInUpBig">
+        <img src="image/323914620_1571722909934742_4947035793330347072_n.png" alt="">
+      </div>
+      <div class="face">
+        <img src="image/331324920_411994007808830_5458286697352087382_n.png" alt="">
       </div>
       </div>
       
-      <div>
+      
         <img class="group" src="image/315574582_669241857978207_6336028129238262344_n.png" alt="">
+        <img class="three" src="image/three1 (2).png" alt="">
         <h1 class="with">With private messaging and calling, you can <br> be yourself, speak freely and feel close to the <br> most important people in your life no matter <br> where they are.</h1>
         <img class="group" src="image/315632381_5616928641708856_9210500231334849736_n.png" alt="">
+        <img class="three" src="image/treee2.png" alt="">
       </div>
       <div class="nested">
         <div class="never">
@@ -312,7 +394,7 @@
        
       <div class="pic">
         <img src="image/316036583_870096634427722_4468595013887544943_n.png" alt="">
-      </div>7
+      </div>
       <div class="never2" style="padding-top: 120px; padding-left: 50px;">
         <h1 class="speak">
           Speak <br>
@@ -369,39 +451,58 @@
     </div>
     </div>
 
-    <div style="background-color: black;width: 100%;height: 1200px;padding-left: 70px;display: flex;justify-content: center;align-content: center;">
-      <div initinit>
-      <div>
-        <img src="image/Qhrnh5evyPV.png" alt="">
-        <div>
-          <button class=" rounded-5 text-dark mt-5 fs-3"  style="background-color: rgb(37,211,102);">Download <img src="image/svgexport-13.svg" alt=""></button>
+    <div class="bb" style="background-color: black;width: 100%;height: 800px;padding-top: 50px;">
+      
+      <div class="text-center">
+        <img  src="image/Qhrnh5evyPV.png" alt=""><br>
+        <button class=" rounded-5 text-dark mt-5 fs-3 mx-auto"  style="background-color: rgb(37,211,102);">Download <img src="image/svgexport-13.svg" alt=""></button>
+      </div>
+      <div class="foot" style="display: flex; justify-content: space-around;margin-left: 40px;">
+      
+        <div class="text-white">
+        <p>what we do</p><br> 
+        <p>Features</p>
+        <p>Blog</p>
+        <p>Security</p>
+        <p>For Business</p>
+
+    
+      </div>
+        <div class="text-white">
+          <p>who we are</p><br>
+          <a style="color: white;text-decoration: none;" href=""> <p>About Us</p></a>
+          <a style="color: white;text-decoration: none;" href=""> <p>Career</p></a></a>
+          <a style="color: white;text-decoration: none;" href=""><p>Brand Center</p></a>
+          <a style="color: white;text-decoration: none;" href=""><p>Privacy</p></a>
+     
+      </div><hr style="color: white;">
+      <br>
+    </div>
+    <div style="display: flex; justify-content: space-around;margin-left: 40px;">
         <div class=" text-white">
-        <p>what we do</p><br> <br>
-        <div><a style="color: white;text-decoration: none;" href="">Features</a></div><br>
-        <div><a style="color: white;text-decoration: none;" href="">Blog</a></div><br>
-        <div><a style="color: white;text-decoration: none;" href="">Security</a><br></div>
-        <div><a style="color: white;text-decoration: none;" href="">For Business</a></div>
+          <p>Use whatsapp</p><br>
+          <a style="color: white;text-decoration: none;" href=""><p>Android</p></a>
+          <a style="color: white;text-decoration: none;" href=""> <p>IPHONE</p></a>
+          <a style="color: white;text-decoration: none;" href=""> <p>MAC/PC</p></a></a>
+          <a style="color: white;text-decoration: none;" href=""><p>Whatsapp web</p></a>
       </div>
         <div class=" text-white">
-          <div><p>who we are</p></div><br><br>
-        <div><a style="color: white;text-decoration: none;" href="">About Us</a></div><br>
-        <div> <a style="color: white;text-decoration: none;" href="">Career</a></div><br>
-        <div><a style="color: white;text-decoration: none;" href="">Brand Center</a></div><br>
-        <div><a style="color: white;text-decoration: none;" href="">Privacy</a></div>
-      </div>
-        <div class=" text-white">
-          <div></div><p>Use whatsapp</p><br><br>
-          <div> <a style="color: white;text-decoration: none;" href="">Android</a></div><br>
-          <div><a style="color: white;text-decoration: none;" href="">Iphone</a></div><br>
-          <div><a style="color: white;text-decoration: none;" href="">MAC/PC</a></div><br>
-          <div><a style="color: white;text-decoration: none;" href="">Whatsaap web</a></div>
-      </div>
-        <div class=" text-white">
-          <div><p>Use Need help</p></div><br><br>
-          <div> <a style="color: white;text-decoration: none;" href="">Contact Us</a></div><br>
-          <div><a style="color: white;text-decoration: none;" href="">Help Center</a></div><br>
-          <div><a style="color: white;text-decoration: none;" href="">Download</a><br></div>
-        <div> <a style="color: white;text-decoration: none;" href="">Security Advisories</a></div>
+          <div><p>Use Need help</p></div><br>
+          <a style="color: white;text-decoration: none;" href=""><p>Contact Us</p></a>
+          <a style="color: white;text-decoration: none;" href=""> <p>Help center</p></a>
+          <a style="color: white;text-decoration: none;" href=""> <p>Download</p></a></a>
+          <a style="color: white;text-decoration: none;" href=""><p>Security Advisories</p></a>
+        </div>
+      </div><hr style="color: white;">
+      
+      <div style="display: flex; justify-content: space-evenly;align-content: 
+      space-evenly;
+      padding: auto;" class="text-center">
+        <button class="logo" style="border: 1px solid white;border-radius: 100%;background-color: black;padding: 20px;"><img src="image/svgexport-14.svg" alt="" width="50px"></button><br>
+        <button  class="logo" style="border: 1px solid white;border-radius: 100%;background-color: black;padding: 20px;"><img src="image/svgexport-15.svg" alt="" width="50px"></button><br>
+        <button  class="logo" style="border: 1px solid white;border-radius: 100%;background-color: black;padding: 20px;"><img src="image/svgexport-16.svg" alt="" width="50px"></button><br>
+        <button  class="logo" style=""><img src="image/svgexport-17.svg" alt="" width="30px"></button>
+       
       </div>
     </div>
       
